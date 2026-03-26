@@ -64,7 +64,15 @@ const jsonLd = {
 
 export default function Home() {
 
-
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        author_name: 'Subhradip Majumder'
+      });
+    }
+  }, []);
   return (
     <>
       <script
