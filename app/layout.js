@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <head>
         {/* GA4 Script */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-27GR48OO5D"
+          src="https://www.googletagmanager.com/gtag/js?id=G-27GR48YR5D"
           strategy="afterInteractive"
         />
         <Script id="ga4-init" strategy="afterInteractive">
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
             gtag('js', new Date());
 
             // ✅ disable auto page_view
-            gtag('config', 'G-27GR48OO5D', {
+            gtag('config', 'G-27GR48YR5D', {
               send_page_view: false
             });
           `}
