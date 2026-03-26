@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Downloader() {
   const [url, setUrl] = useState('');
@@ -29,6 +29,17 @@ export default function Downloader() {
       setLoading(false);
     }
   };
+  
+  useEffect(() => {
+    if (window.gtag) {
+      console.log("In gtag")
+      window.gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        author_name: 'Subhradip Majumder'
+      });
+    }
+  }, []);
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-2xl shadow-xl mt-10 border border-gray-100">
